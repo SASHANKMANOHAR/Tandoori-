@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tandoori Inn - Authentic Indian Cuisine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="home">
+    <!-- Main Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="#home" class="logo">
+          <span>Tandoori Inn</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+          <!-- Reserve table link removed as requested -->
+        </div>
+        
+        <!-- Mobile Navigation Button -->
+        <div class="menu-toggle-wrapper">
+          <button id="menuToggle" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+      <button id="closeMenu" class="close-menu">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="mobile-menu-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <!-- Reserve table link removed as requested -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <img src="images/restaurant-hero.jpg" alt="Restaurant interior" class="hero-img">
+    
+    <div class="hero-content">
+      <div class="container">
+        <h1>Experience Authentic <span>Indian Cuisine</span></h1>
+        <p>Traditional flavors prepared with passion and served with warmth</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3>Authentic Tandoor</h3>
+          <p>Our clay oven brings out the rich, smoky flavors that define traditional North Indian cuisine.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-mortar-pestle"></i>
+          </div>
+          <h3>Fresh Spices</h3>
+          <p>We grind our spices in-house daily to ensure the freshest, most aromatic flavors in every dish.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Dietary Options</h3>
+          <p>Extensive vegetarian, vegan, and gluten-free options to accommodate all dietary preferences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="menu">
+    <div class="container">
+      <h2>Our Menu</h2>
+      <p class="section-desc">Experience the rich tapestry of flavors that define authentic Indian cuisine, carefully prepared by our master chefs.</p>
+
+      <!-- Menu Tabs -->
+      <div class="menu-tabs">
+        <div class="tabs-container">
+          <button class="menu-tab active" data-category="all">All</button>
+          <button class="menu-tab" data-category="starters">Starters</button>
+          <button class="menu-tab" data-category="mains">Main Course</button>
+          <button class="menu-tab" data-category="tandoori">Tandoori</button>
+          <button class="menu-tab" data-category="vegetarian">Vegetarian</button>
+          <button class="menu-tab" data-category="desserts">Desserts</button>
+        </div>
+      </div>
+
+      <!-- Menu Items -->
+      <div class="menu-items">
+        <!-- Starters -->
+        <div class="menu-item" data-category="starters">
+          <div class="menu-item-header">
+            <h3>Vegetable Samosas</h3>
+            <span class="price">₹250</span>
+          </div>
+          <div class="menu-item-image">
+            <img src="images/samosa.jpg" alt="Vegetable Samosas">
+          </div>
+          <p>Crispy pastry filled with spiced potatoes and peas, served with tamarind chutney.</p>
+          <span class="diet-tag vegetarian">Vegetarian</span>
+        </div>
+        
+        <div class="menu-item" data-category="starters">
+          <div class="menu-item-header">
+            <h3>Chicken Pakora</h3>
+            <span class="price">₹350</span>
+          </div>
+          <div class="menu-item-image">
+            <img src="images/chicken-pakora.jpg" alt="Chicken Pakora">
+          </div>
+          <p>Tender pieces of chicken in a spiced chickpea batter, deep-fried to perfection.</p>
+          <span class="diet-tag gluten-free">Gluten-Free</span>
+        </div>
+        
+        <!-- Main Course -->
+        <div class="menu-item" data-category="mains">
+          <div class="menu-item-header">
+            <h3>Butter Chicken</h3>
+            <span class="price">₹450</span>
+          </div>
+          <div class="menu-item-image">
+            <img src="images/butter-chicken.jpg" alt="Butter Chicken">
+          </div>
+          <p>Tandoori chicken cooked in a rich, creamy tomato sauce with butter and spices.</p>
+          <span class="diet-tag spicy">Spicy</span>
+        </div>
+        
+        <div class="menu-item" data-category="mains vegetarian">
+          <div class="menu-item-header">
+            <h3>Paneer Tikka Masala</h3>
+            <span class="price">₹399</span>
+          </div>
+          <div class="menu-item-image">
+            <img src="images/paneer-tikka.jpg" alt="Paneer Tikka Masala">
+          </div>
+          <p>Grilled cottage cheese in a spiced tomato-based sauce with bell peppers and onions.</p>
+          <span class="diet-tag vegetarian">Vegetarian</span>
+        </div>
+        
+        <!-- Tandoori -->
+        <div class="menu-item" data-category="tandoori">
+          <div class="menu-item-header">
+            <h3>Tandoori Chicken</h3>
+            <span class="price">₹499</span>
+          </div>
+          <div class="menu-item-image">
+            <img src="images/tandoori-chicken.jpg" alt="Tandoori Chicken">
+          </div>
+          <p>Chicken marinated in yogurt and spices, roasted in our traditional clay oven.</p>
+          <span class="diet-tag gluten-free">Gluten-Free</span>
+        </div>
+        
+        <div class="menu-item" data-category="tandoori">
+          <div class="menu-item-header">
+            <h3>Seekh Kebab</h3>
+            <span class="price">₹450</span>
+          </div>
+          <div class="menu-item-image">
+            <img src="images/seekh-kebab.jpg" alt="Seekh Kebab">
+          </div>
+          <p>Minced lamb mixed with herbs and spices, skewered and grilled in the tandoor.</p>
+          <span class="diet-tag spicy">Spicy</span>
+        </div>
+        
+        <!-- Vegetarian -->
+        <div class="menu-item" data-category="vegetarian">
+          <div class="menu-item-header">
+            <h3>Chana Masala</h3>
+            <span class="price">₹325</span>
+          </div>
+          <div class="menu-item-image">
+            <img src="images/chana-masala.jpg" alt="Chana Masala">
+          </div>
+          <p>Chickpeas cooked in a spicy tomato-based sauce with onions and traditional spices.</p>
+          <span class="diet-tag vegetarian">Vegetarian</span>
+          <span class="diet-tag vegan">Vegan</span>
+        </div>
+        
+        <div class="menu-item" data-category="vegetarian">
+          <div class="menu-item-header">
+            <h3>Dal Makhani</h3>
+            <span class="price">₹375</span>
+          </div>
+          <div class="menu-item-image">
+            <img src="images/dal-makhani.jpg" alt="Dal Makhani">
+          </div>
+          <p>Black lentils slow-cooked with butter, cream, and aromatic spices.</p>
+          <span class="diet-tag vegetarian">Vegetarian</span>
+        </div>
+        
+        <!-- Desserts -->
+        <div class="menu-item" data-category="desserts">
+          <div class="menu-item-header">
+            <h3>Gulab Jamun</h3>
+            <span class="price">₹199</span>
+          </div>
+          <div class="menu-item-image">
+            <img src="images/gulab-jamun.jpg" alt="Gulab Jamun">
+          </div>
+          <p>Sweet milk dumplings soaked in rose-flavored sugar syrup.</p>
+          <span class="diet-tag vegetarian">Vegetarian</span>
+        </div>
+        
+        <div class="menu-item" data-category="desserts">
+          <div class="menu-item-header">
+            <h3>Kheer</h3>
+            <span class="price">₹199</span>
+          </div>
+          <div class="menu-item-image">
+            <img src="images/kheer.jpg" alt="Kheer">
+          </div>
+          <p>Traditional rice pudding infused with cardamom and garnished with nuts.</p>
+          <span class="diet-tag vegetarian">Vegetarian</span>
+        </div>
+      </div>
+
+      <div class="menu-download">
+        <a href="#" class="btn btn-primary">Download Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Restaurant chef preparing food">
+        </div>
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p>Founded in 1998 by the Sharma family, Tandoori Inn brings the authentic flavors of Northern India to your table. Our recipes have been passed down through generations, preserving the traditional cooking techniques that make Indian cuisine so distinctive.</p>
+          <p>Every dish at Tandoori Inn tells a story of culture, heritage, and passion. Our chefs, trained in the culinary traditions of India, use only the freshest ingredients and hand-ground spices to create an unforgettable dining experience.</p>
+          
+          <div class="chef-info">
+            <h3>Meet Our Chef</h3>
+            <div class="chef-profile">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Head Chef">
+              <div>
+                <p class="chef-name">Raj Sharma</p>
+                <p class="chef-title">Master Chef with 25 years of experience</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-values">
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h4>Our Values</h4>
+              <p>We believe in quality, authenticity, and creating memorable dining experiences.</p>
+            </div>
+            
+            <div class="value-card">
+              <div class="value-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h4>Sustainability</h4>
+              <p>We source locally and sustainably whenever possible to reduce our environmental impact.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Our Guests Say</h2>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"The butter chicken at Tandoori Inn is absolutely divine! The flavor balance is perfect—rich and creamy with just the right amount of spice. This is truly authentic Indian cuisine at its finest."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Customer">
+            <div>
+              <p class="author-name">Sarah Johnson</p>
+              <p class="author-title">Food Blogger</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"As a vegetarian, I'm always looking for places with great meatless options. The paneer tikka masala and dal makhani here are out of this world! Even my non-vegetarian friends love them."</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Customer">
+            <div>
+              <p class="author-name">Michael Chen</p>
+              <p class="author-title">Regular Customer</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>"The atmosphere is as wonderful as the food. Warm, inviting, and authentically decorated. The staff makes you feel like family, and the tandoori dishes are exceptional. A hidden gem!"</p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Customer">
+            <div>
+              <p class="author-name">Emily Rodriguez</p>
+              <p class="author-title">Local Food Critic</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Our Gallery</h2>
+      <p class="section-desc">Feast your eyes on our delicious creations and inviting atmosphere</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-img">
+          <img src="images/tandoori-chicken.jpg" alt="Tandoori Chicken">
+        </div>
+        
+        <div class="gallery-img">
+          <img src="images/butter-chicken.jpg" alt="Butter Chicken">
+        </div>
+        
+        <div class="gallery-img">
+          <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior">
+        </div>
+        
+        <div class="gallery-img">
+          <img src="images/samosa.jpg" alt="Samosas">
+        </div>
+        
+        <div class="gallery-img">
+          <img src="images/naan-bread.jpg" alt="Naan Bread">
+        </div>
+        
+        <div class="gallery-img">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Restaurant Seating">
+        </div>
+        
+        <div class="gallery-img">
+          <img src="images/paneer-tikka.jpg" alt="Paneer Tikka">
+        </div>
+        
+        <div class="gallery-img">
+          <img src="images/gulab-jamun.jpg" alt="Gulab Jamun">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal">
+      <button id="closeGallery" class="close-gallery">
+        <i class="fas fa-times"></i>
+      </button>
+      <button id="prevImage" class="nav-gallery prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button id="nextImage" class="nav-gallery next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <img id="modalImage" src="" alt="Gallery image">
+    </div>
+  </section>
+
+  <!-- Reservation -->
+  <section id="reservation" class="reservation">
+    <div class="container">
+      <h2>Reserve a Table</h2>
+      <p class="section-desc">Experience the flavors of India at Tandoori Inn. Make a reservation for an unforgettable dining experience.</p>
+      
+      <div class="reservation-form-container">
+        <form id="reservationForm" class="reservation-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" name="guests" required>
+              <option value="">Select</option>
+              <option value="1">1 Person</option>
+              <option value="2">2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4 People</option>
+              <option value="5">5 People</option>
+              <option value="6">6 People</option>
+              <option value="7+">7+ People</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="time">Time</label>
+            <select id="time" name="time" required>
+              <option value="">Select</option>
+              <option value="17:00">5:00 PM</option>
+              <option value="17:30">5:30 PM</option>
+              <option value="18:00">6:00 PM</option>
+              <option value="18:30">6:30 PM</option>
+              <option value="19:00">7:00 PM</option>
+              <option value="19:30">7:30 PM</option>
+              <option value="20:00">8:00 PM</option>
+              <option value="20:30">8:30 PM</option>
+              <option value="21:00">9:00 PM</option>
+            </select>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="special">Special Requests</label>
+            <textarea id="special" name="special" rows="3"></textarea>
+          </div>
+          
+          <div class="form-group full-width text-center">
+            <button type="submit" class="btn btn-primary">Book My Table</button>
+          </div>
+        </form>
+        
+        <div id="reservationConfirmation" class="confirmation-message">
+          <p class="confirm-title">Thank you for your reservation!</p>
+          <p>We've received your booking request and will confirm shortly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p class="section-desc">Have questions or feedback? We'd love to hear from you.</p>
+      
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Our Location</h3>
+          <p>Municipal Complex, Diamond Park Jct,</p>
+          <p>Rednam Manor, Dwarka Nagar,</p>
+          <p>Visakhapatnam, Andhra Pradesh 530016</p>
+          <a href="https://maps.google.com" target="_blank" class="contact-link">Get Directions</a>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Hours</h3>
+          <p>Monday - Friday: 12:00 AM - 10:00 PM</p>
+          <p>Saturday - Sunday: 12:00 AM - 12:00 PM</p>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3>Contact</h3>
+          <p>Phone: 09346212111</p>
+          <p>Email: info@tandooriinn.com</p>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-link">
+              <i class="fab fa-yelp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="message-form-container">
+        <h3>Send Us a Feedback <i class="fas fa-smile"></i></h3>
+        
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="contactName">Your Name</label>
+            <input type="text" id="contactName" name="contactName" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="contactEmail">Email Address</label>
+            <input type="email" id="contactEmail" name="contactEmail" required>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          
+          <div class="form-group full-width text-center">
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+          </div>
+        </form>
+        
+        <div id="contactConfirmation" class="confirmation-message">
+          <p class="confirm-title">Thank you for your feedback! <i class="fas fa-heart"></i></p>
+          <p>We appreciate your input and will use it to improve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>Tandoori Inn</h3>
+          <p>Experience the authentic flavors of India in every bite. Family-owned and operated since 1998.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-yelp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Municipal Complex, Diamond Park Jct, Dwarka Nagar, Visakhapatnam</li>
+            <li><i class="fas fa-phone-alt"></i> 09346212111</li>
+            <li><i class="fas fa-envelope"></i> info@tandooriinn.com</li>
+          </ul>
+        </div>
+        
+        <div class="footer-hours">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li>Monday - Friday: 12:00 AM - 10:00 PM</li>
+            <li>Saturday - Sunday: 12:00 AM - 12:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tandoori Inn. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollToTop" class="scroll-top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
